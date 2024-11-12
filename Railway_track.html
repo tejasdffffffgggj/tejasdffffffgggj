@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Track Crack Detection</title>
+    <link rel="stylesheet" href="style/Railwauy_track.css">
+    <script src="scripts.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+</head>
+<body>
+    <header>
+        <h1>Railway Track Crack Detection Dashboard</h1>
+    </header>
+
+    <main>
+        <!-- Sidebar for Crack Information and Analysis -->
+        <section class="sidebar">
+            <h2>Track Crack Information</h2>
+            <div class="crack-info">
+                <h3>Recent Cracks Detected</h3>
+                <ul id="crackList">
+                    <!-- Placeholder data, can be dynamically updated via JavaScript -->
+                    <li><strong>Location:</strong> Lat 16.4971, Lng 80.4992 | <strong>Severity:</strong> High</li>
+                    <li><strong>Location:</strong> Lat 16.4971, Lng 80.4992 | <strong>Severity:</strong> Medium</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section">
+            <div id="map"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Railway Track Crack Detector System</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize the map and set its view to a default location and zoom level
+            const map = L.map('map').setView([16.4971, 80.4992], 5);
+        
+            // Add a tile layer from OpenStreetMap
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+        
+            // Sample data - replace with real data from the backend
+            const cracks = [
+                { lat: 16.4971, lng: 80.4992, severity: 'High' },
+                { lat: 16.5971, lng: 80.4992, severity: 'Medium' },
+            ];
+        
+            // Add markers for each crack
+            cracks.forEach(crack => {
+                const marker = L.marker([crack.lat, crack.lng]).addTo(map);
+                marker.bindPopup(`<strong>Severity:</strong> ${crack.severity}`);
+            });
+        });
+    </script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</body>
+</html>

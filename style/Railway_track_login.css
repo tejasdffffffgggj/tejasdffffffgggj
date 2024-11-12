@@ -1,0 +1,128 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+.name{
+    width:300px;
+    height: 30px;
+    font-size: 20px;
+}
+.lable{
+    font-size: 30px;
+}
+.Name_2,
+.Name_1 {
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 305px;
+    height: 40px;
+    border: 2px solid #333; 
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 20px;
+}
+.password {
+    display: block;
+    margin-bottom: 10px;
+    width: 305px;
+    height: 40px;
+    border: 2px solid #333; 
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 20px;
+}
+.Email {
+    display: block;
+    margin-bottom: 10px;
+    width: 305px;
+    height: 40px;
+    border: 2px solid #333; 
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 20px;
+}
+.Sign_up {
+    width: 250px;
+    height: 40px;
+    background-color: rgb(157, 109, 202);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 160px;
+}
+.Sign_up:hover {
+    opacity: 0.9;
+}
+.login,
+.signin{
+    width:150px;
+    height: 40px;
+    background-color: rgb(157, 109, 202);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+}
+.login:hover{
+    opacity: 0.9;
+}
+.signin:hover{
+    opacity: 0.9;
+}
+.login{
+    display: inline-block;
+}
+.signin{
+    display: inline-block;
+}
+.logo{
+    width: 70px;
+    border-radius: 50px;
+}
+.MainTitle,
+.logbuttons{
+    display: inline-block;
+}
+.MainTitle{
+    margin-top: 0%;
+}
+.Title{
+    display:inline-block;
+    margin-top: 2px;
+}
+.head{
+    display: inline-block
+}
+.logbuttons{
+    margin-left: 1150px;
+}
+body{
+    background-image: url("Railway_saftey.jpg");
+    background-position: center;
+    background-size: contain;
+    background-attachment: local;
+}
+.headpart{
+    text-align: center;
+    font-size: 30px;
+}
+@media (min-width:670px) {
+    .login,
+    .signin{
+        max-width: 670px;
+    }
+}
+@media (min-width:870px) {
+    .login,
+    .signin{
+        max-width: 870px;
+    }
+}

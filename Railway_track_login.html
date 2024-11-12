@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SIGN UP </title>
+    <link rel="stylesheet" href="style/Railway_track_login.css">
+</head>
+
+<body>
+    <header>
+        <div class ="head">
+            <div class = "MainTitle">
+                <h1 class = "Title">See Track</h1>
+            </div>
+            <div class ="logbuttons">
+                <button class ="login">log in</button>
+                <button class ="signin">sign in</button>
+            </div>
+        </div>
+    </header>
+    <section class = "headpart">
+        <h1>Track The location of the detector &#10024;</h1>
+    </section>
+    <div class = "container">
+        <form id="loginForm">
+            <label class = "lable" for="Firstname">Firstname:</label>
+            <input class ="name"type="text" id="Firstname" required><br><br>
+
+            <label class = "lable" for="Lastname">Lastname:</label>
+            <input class = "name" type="text" id="Lastname" required><br><br>
+
+            <label class = "lable" for="password">Password:</label>
+            <input class = "name" type="password" id="password" required><br><br>
+    
+            <button class = "Sign_up" type="submit">Login</button>
+        </form>
+
+    </div>
+    
+    <script>
+        // JavaScript to handle login form submission
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Get entered username and password
+            const Firstname = document.getElementById("Firstname").value;
+            const Lastname = document.getElementById("Lastname").value;
+            const password = document.getElementById("password").value;
+
+            // Set your expected username and password
+            const expectedFirstname = "Teja";
+            const expectedLastname = "Srinivas";
+            const expectedPassword = "vit123";
+
+            // Validate login details
+            if (Firstname === expectedFirstname && Lastname === expectedLastname && password === expectedPassword) {
+                // If login is successful, redirect to the main website
+                window.location.href = "https://tejasdffffffgggj.github.io/tejasdffffffgggj/Railway_track.html";
+            } else {
+                // If login fails, show an error message
+                alert("Incorrect username or password. Please try again.");
+            }
+        });
+    </script>
+
+</body>
+</html>
